@@ -1,4 +1,3 @@
-// ProductsPage.js (Page Object)
 class ProductsFilterByPage {
 
 
