@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - qa
-
+      - dev
   pull_request:
 
 jobs:
@@ -13,25 +13,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout do código
+
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Configurar o Node.js
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # Step 3: Instalar dependências
+
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Instalar Cypress
+
       - name: Install Cypress
         run: npx cypress install
 
-      # Step 5: Executar testes
-      - name: Run Cypress Tests
-        run: npx cypress run
 
+      - name: Run Cypress Tests
+
+        run: npx cypress run 

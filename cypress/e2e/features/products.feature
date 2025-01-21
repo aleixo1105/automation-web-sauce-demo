@@ -28,3 +28,7 @@ Feature: Product page functionality
     Given I am logged in with valid credentials
     When I sort products by Name - Z to A
     Then The products should be sorted by name in descending order
+
+  Scenario: Validate Sorting by Price Ascending is defualt
+    Given I am logged in with valid credentials
+    Then I Check sorting by Price is dedault

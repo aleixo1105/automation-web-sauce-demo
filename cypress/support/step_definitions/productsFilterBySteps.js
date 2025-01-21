@@ -17,7 +17,11 @@ When('I sort products by Price - low to high', function() {
 When('I sort products by Price - high to low',function() {
   ProductsFilterbyPage.selectSortByPriceHighToLow();
 });
- 
+
+When('I Check sorting by Price is dedault',function() {
+  ProductsFilterbyPage.validateDefaultSortByPriceLowToHigh();
+});
+  
 
 Then('The products should be sorted by price in descending order', () => {
   ProductsFilterbyPage.validatePricesInDescendingOrder();

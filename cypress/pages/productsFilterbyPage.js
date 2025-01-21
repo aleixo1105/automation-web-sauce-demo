@@ -92,6 +92,11 @@ class ProductsFilterByPage {
     });
   }
 
+
+  validateDefaultSortByPriceLowToHigh() {
+    this.getSortDropdown().should('have.value', 'lohi'); 
+  }
+
 } 
  
 
