@@ -20,13 +20,13 @@ class LoginPage {
     }
 
     performLogin() {
-      // Realiza o login
+
       cy.visit('/');
       this.enterUsername(Cypress.env('VALID_USERNAME'));
       this.enterPassword(Cypress.env('VALID_PASSWORD'));
       this.clickLoginButton();
     
-      // Verifica se foi redirecionado para a página de produtos
+
       cy.url().should('include', '/inventory.html');
     }
   }
