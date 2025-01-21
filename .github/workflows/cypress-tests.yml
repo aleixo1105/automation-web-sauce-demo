@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+      - qa
+
   pull_request:
 
 jobs:
@@ -32,3 +34,4 @@ jobs:
       # Step 5: Executar testes
       - name: Run Cypress Tests
         run: npx cypress run
+
