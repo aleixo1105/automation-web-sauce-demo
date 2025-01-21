@@ -1,10 +1,11 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import ProductsPage from '../../pages/productsPage'; // Importando a instância de productsPage
 
-import { performLogin } from './loginSteps';
+import LoginPage from '../../pages/loginPage'; // Importando a instância de productsPage
 
-Given('I am logged in with valid credentials', () => {
-  performLogin(); // Realiza o login
+
+Given('I am logged in with valid credentials', function() {
+  LoginPage.performLogin(); // Chama a função de login reutilizável
 });
 
 When('Should ensure that the products layout is structured in a grid', function() {
