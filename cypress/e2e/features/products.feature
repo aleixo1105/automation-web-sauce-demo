@@ -32,3 +32,14 @@ Feature: Product page functionality
   Scenario: Validate Sorting by Price Ascending is defualt
     Given I am logged in with valid credentials
     Then I Check sorting by Price is dedault
+
+
+  Scenario: Validate Product Descrition is accessible via image
+    Given I am logged in with valid credentials
+    When I access Product Description via image
+
+
+  Scenario: Validate Product Descrition is accessible via name
+    Given I am logged in with valid credentials
+    When I access Product Description via name
+
