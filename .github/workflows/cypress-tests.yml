@@ -32,6 +32,21 @@ jobs:
         run: npx cypress install
 
 
-      - name: Run Cypress Tests
+      - name: Clean old reports
+        run: npm run clean-reports
 
+
+      - name: Run Cypress Tests
         run: npx cypress run 
+
+
+      - name: Report
+        run: npm run full-report
+
+
+
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: mochawesome-report
+          path: reports/mochawesome/combined-report.html
