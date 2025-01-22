@@ -1,10 +1,17 @@
 class ProductsPage {
 
+  validateProductsPage() {
+    cy.url().should("include", "/inventory.html");
+    cy.get('[data-test="title"]').should("be.visible").and("have.text", "Products");
+
+  }
+
+  
   validateGridLayout() {
     cy.get('.inventory_list').should('have.css', 'display', 'flex');
   }
-  
 
+  
   validateProductNameVisibility() {
     cy.get('.inventory_item_name').each(($name) => {
       
@@ -54,6 +61,28 @@ class ProductsPage {
         .should('not.be.empty'); 
     });
   }
+
+
+  accessProductDescriptionByImage() {
+    cy.get('[class="inventory_item_img"]').each(($image, index) => {
+
+      cy.get('[class="inventory_item_img"]').eq(index).should('be.visible').click();
+      cy.get('[class="inventory_details_desc large_size"]').should('be.visible');  
+      cy.get('[id="back-to-products"]').should('be.visible').click();
+    });
+
+  }
+
+  accessProductDescriptionByName() {
+    cy.get('[class="inventory_item_name"]').each(($image, index) => {
+
+      cy.get('[class="inventory_item_name"]').eq(index).should('be.visible').click();
+      cy.get('[class="inventory_details_desc large_size"]').should('be.visible');  
+      cy.get('[id="back-to-products"]').should('be.visible').click();
+    });
+
+  }
+
 
 } 
  
