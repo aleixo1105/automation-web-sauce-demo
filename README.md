@@ -1,8 +1,5 @@
-# automationWebSauceDemo Project Structure
-
 # This project is an automation of tests using Cypress with Cucumber for a Sauce Labs demo page.
-# The directory structure is as follows:
-
+### The directory structure is as follows:
 
 ```
 automationWebSauceDemo/
