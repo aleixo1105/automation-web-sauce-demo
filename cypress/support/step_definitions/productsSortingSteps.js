@@ -1,40 +1,40 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
-import ProductsFilterbyPage from '../../pages/productsFilterbyPage';
+import ProductsSortingPage from '../../pages/productsSortingPage';
 
 
 When('I sort products by Name - A to Z', function() {
-  ProductsFilterbyPage.selectSortByNameAscending();
+  ProductsSortingPage.selectSortByNameAscending();
 });
 
 When('I sort products by Name - Z to A',function() {
-  ProductsFilterbyPage.selectSortByNameDescending();
+  ProductsSortingPage.selectSortByNameDescending();
 });
 
 When('I sort products by Price - low to high', function() {
-  ProductsFilterbyPage.selectSortByPriceLowToHigh();
+  ProductsSortingPage.selectSortByPriceLowToHigh();
 });
 
 When('I sort products by Price - high to low',function() {
-  ProductsFilterbyPage.selectSortByPriceHighToLow();
+  ProductsSortingPage.selectSortByPriceHighToLow();
 });
 
 When('I Check sorting by Price is dedault',function() {
-  ProductsFilterbyPage.validateDefaultSortByPriceLowToHigh();
+  ProductsSortingPage.validateDefaultSortByPriceLowToHigh();
 });
   
 
 Then('The products should be sorted by price in descending order', () => {
-  ProductsFilterbyPage.validatePricesInDescendingOrder();
+  ProductsSortingPage.validatePricesInDescendingOrder();
 });
 
 Then('The products should be sorted by price in ascending order', () => {
-  ProductsFilterbyPage.validatePricesInIAscendingOrder();
+  ProductsSortingPage.validatePricesInIAscendingOrder();
 });
 
 Then('The products should be sorted by name in ascending order', () => {
-  ProductsFilterbyPage.validateNamesInAscendingOrder(); 
+  ProductsSortingPage.validateNamesInAscendingOrder(); 
 });
 
 Then('The products should be sorted by name in descending order', () => {
-  ProductsFilterbyPage.validateNamesInDescendingOrder(); 
+  ProductsSortingPage.validateNamesInDescendingOrder(); 
 });
