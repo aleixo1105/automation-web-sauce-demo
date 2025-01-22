@@ -59,11 +59,11 @@ automationWebSauceDemo/
 ### How to Run the Project
 Follow the steps below to run the Cypress tests in the project.
 
-# 1. Clone the Repository
+### 1. Clone the Repository
 ```
 git clone https://github.com/your-username/automation-web-sauce-demo.git
 ```
-# 2. Install Dependencies
+### 2. Install Dependencies
 Navigate to the project directory and install the necessary dependencies:
 
 ```
