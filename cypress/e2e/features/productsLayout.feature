@@ -1,3 +1,4 @@
+@product @layout
 Feature: Product page Layout
 
   Scenario: Validate the layout.
