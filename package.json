@@ -1,6 +1,10 @@
 {
     "scripts": {
         "test": "cypress run",
+        "test-login": "npx cypress run --env TAGS=@login",
+        "test-product": "npx cypress run --env TAGS=@product",
+        "test-layout": "npx cypress run --env TAGS=@layout",
+        "test-sorting": "npx cypress run --env TAGS=@sorting",
         "clean-reports": "del-cli reports/mochawesome/*",
         "merge-reports": "npx mochawesome-merge reports/mochawesome/*.json -o reports/mochawesome/combined-report.json",
         "generate-report": "npx marge reports/mochawesome/combined-report.json -f combined-report -o reports/mochawesome",
