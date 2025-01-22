@@ -55,6 +55,28 @@ class ProductsPage {
     });
   }
 
+
+  accessProductDescriptionByImage() {
+    cy.get('[class="inventory_item_img"]').each(($image, index) => {
+
+      cy.get('[class="inventory_item_img"]').eq(index).should('be.visible').click();
+      cy.get('[class="inventory_details_desc large_size"]').should('be.visible');  
+      cy.get('[id="back-to-products"]').should('be.visible').click();
+    });
+
+  }
+
+  accessProductDescriptionByName() {
+    cy.get('[class="inventory_item_name"]').each(($image, index) => {
+
+      cy.get('[class="inventory_item_name"]').eq(index).should('be.visible').click();
+      cy.get('[class="inventory_details_desc large_size"]').should('be.visible');  
+      cy.get('[id="back-to-products"]').should('be.visible').click();
+    });
+
+  }
+
+
 } 
  
 

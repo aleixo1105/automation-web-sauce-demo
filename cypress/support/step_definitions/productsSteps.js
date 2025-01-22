@@ -32,3 +32,10 @@ When('Should ensure that all add to cart buttons are visible', function() {
   ProductsPage.validateAddToCartButtonVisibility();
 });
 
+When('I access Product Description via image', function() {
+  ProductsPage.accessProductDescriptionByImage();
+});
+
+When('I access Product Description via name', function() {
+  ProductsPage.accessProductDescriptionByImage();
+});
