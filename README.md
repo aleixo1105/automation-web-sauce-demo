@@ -104,6 +104,7 @@ automationWebSauceDemo/
 │   │   ├── loginPage.js           
 │   │   ├── productsLayoutPage.js  
 │   │   └── productsSortingPage.js 
+│   ├── screenshots/   
 │   ├── support/                   
 │   │   ├── stepsDefinitions/      
 │   │   │   ├── loginSteps.js      
@@ -122,6 +123,7 @@ automationWebSauceDemo/
 
 - **`e2e/features/`**:                 # Gherkin feature definition files
 - **`pages/`**:                        # Page objects for tests
+- **`screenshots/`**:                  # Print failed tests
 - **`support/stepsDefinitions`**:      # Cucumber step definitions
 - **`report`**:                        # Git ignore file
 - **`.gitignore `**:                   # Git ignore file
@@ -185,3 +187,4 @@ Merge and generate the test reports:
 ````
 npm run full-report
 ````
+![Descrição da Imagem](mediaReadme/Report_Mochawesome_Suite.png)

@@ -24,4 +24,4 @@ Feature: Product page Sorting
   Scenario: Validate Sorting by Price Ascending is default
     Given I am logged in with valid credentials
     When I access the products page
-    Then I Check sorting by Price is dedault
+    Then I Check sorting by Price is default
