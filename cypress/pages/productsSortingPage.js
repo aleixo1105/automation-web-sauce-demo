@@ -1,4 +1,4 @@
-class ProductsFilterByPage {
+class ProductsSortingPage {
 
 
   getSortDropdown() {
@@ -100,4 +100,4 @@ class ProductsFilterByPage {
 } 
  
 
-export default new ProductsFilterByPage();
+export default new ProductsSortingPage();
