@@ -1,10 +1,17 @@
 class ProductsPage {
 
+  validateProductsPage() {
+    cy.url().should("include", "/inventory.html");
+    cy.get('[data-test="title"]').should("be.visible").and("have.text", "Products");
+
+  }
+
+  
   validateGridLayout() {
     cy.get('.inventory_list').should('have.css', 'display', 'flex');
   }
-  
 
+  
   validateProductNameVisibility() {
     cy.get('.inventory_item_name').each(($name) => {
       

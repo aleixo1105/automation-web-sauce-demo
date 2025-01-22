@@ -8,6 +8,10 @@ Given('I am logged in with valid credentials', function() {
   LoginPage.performLogin();
 });
 
+When("I access the products page", function() {
+  ProductsPage.validateProductsPage();
+});
+
 When('Should ensure that the products layout is structured in a grid', function() {
   ProductsPage.validateGridLayout();
 });
