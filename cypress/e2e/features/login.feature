@@ -1,7 +1,5 @@
+@login
 Feature: Login Page  
-  As a user  
-  I want to securely log into the application  
-  So that I can access the products page  
 
   Scenario: Successful login with valid credentials  
     Given I am on the login page  

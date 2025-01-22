@@ -1,3 +1,4 @@
+@product @sorting
 Feature: Product page Sorting
 
   Scenario: Validate Order By Price - high to low
