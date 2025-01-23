@@ -1,20 +1,52 @@
 # This project is an automation of tests using Cypress with Cucumber for a Sauce Labs demo page.
-
+https://www.saucedemo.com/
 ## Test Cases in Gherkin Format
 ### Login Page Test Cases
 Feature: Login Page  
 
+  Scenario: Verify input fields are visible and accessible
+    Given I am on the login page
+    When I check if Email input fields should be visible
+    Then I check if Password input fields should be visible
+
   Scenario: Successful login with valid credentials  
     Given I am on the login page  
-    When I enter valid credentials  
-    And I click on the login button  
+    When I enter valid email  
+    And I enter valid password  
+    And I click on the login button
     Then I should be redirected to the products page  
 
   Scenario: Unsuccessful login with invalid credentials  
     Given I am on the login page  
-    When I enter invalid credentials  
+    When I enter invalid email    
+    And I enter invalid password  
     And I click on the login button  
-    Then I should see an error message  
+    Then I should see an error message - Username and password do not match
+  
+  Scenario: Attempt login with only email
+    Given I am on the login page  
+    When I enter valid email  
+    And I click on the login button
+    Then I should see an error message - Password is required
+
+  Scenario: Attempt login with only password
+    Given I am on the login page  
+    When I enter valid password  
+    And I click on the login button
+    Then I should see an error message - Username is required
+
+  Scenario: Attempt login without email and password.
+    Given I am on the login page  
+    When I click on the login button
+    Then I should see an error message - Username is required 
+
+  Scenario: Attempt login with valid email but invalid password
+    Given I am on the login page  
+    When I enter valid email    
+    And I enter invalid password  
+    And I click on the login button  
+    Then I should see an error message - Username and password do not match
+    
 
 ### Products Page Test Cases(Layout)
 Feature: Product page Layout
@@ -190,7 +222,41 @@ npm run full-report
 ![Report Mochawesome](mediaReadme/Report_Mochawesome_Suite.png)
 
 
-## Where to see failed tests
+
+## Bug Report: Default Sorting by Name A-Z Instead of Price Ascending 
+### Bug Description:
+The default sorting on the products page is set to "Name: A-Z" instead of the expected "Price: Low to High". When users access the products page, the sorting is incorrectly applied to names alphabetically instead of by price. This issue causes the test to fail, as it does not match the expected behavior of sorting by price by default.
+
+### Expected Behavior:
+- The products should be sorted by price in ascending order ("Price: Low to High") by default.
+
+### Actual Behavior:
+- The products are sorted by name in alphabetical order ("Name: A-Z") by default, rather than by price.
+
+### Steps to Reproduce:
+1. Log in with valid credentials (username: `valid_username`, password: `valid_password`).
+2. Navigate to the products page (`/inventory.html`).
+3. Observe that the sorting dropdown is set to "Name: A-Z" by default.
+4. Verify that the products are sorted by name instead of by price.
+
+### Test Environment:
+- **Operating System:** Windows 10
+- **Browser:** Chrome 131.0.67
+
+### Error Logs:
+
+AssertionError: Timed out retrying after 4000ms: expected '<select.product_sort_container>' to have value 'lohi', but the value was 'az'
+    at ProductsSortingPage.validateDefaultSortByPriceLowToHigh (https://www.saucedemo.com/__cypress/tests?p=cypress\e2e\features\productsSorting.feature:17835:34)
+    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\e2e\features\productsSorting.feature:17862:37)
+    at Registry.runStepDefininition (https://www.saucedemo.com/__cypress/tests?p=cypress\e2e\features\productsSorting.feature:10415:48)
+    at Object.fn (https://www.saucedemo.com/__cypress/tests?p=cypress\e2e\features\productsSorting.feature:17034:43)
+    at runStepWithLogGroup (https://www.saucedemo.com/__cypress/tests?p=cypress\e2e\features\productsSorting.feature:16484:29)
+    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\e2e\features\productsSorting.feature:17030:62)
+    at getRet (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:118320:20)
+    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise.attempt.Promise.try (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4285:29)
+
+### Where to see failed tests
 Cypress with the graphical interface
 
 ![Test Case Failed - Cypress](mediaReadme/Cypress_Test_Case_Failed.png)
@@ -199,3 +265,10 @@ Cypress with the graphical interface
 Report Mochawesome
 
 ![Test Case Failed - Report Mochawesome](mediaReadme/Report_Mochawesome_Test_Case_Failed.png)
+
+
+
+
+
+
+
