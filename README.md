@@ -191,11 +191,11 @@ npm run full-report
 
 
 ## Where to see failed tests
-### Cypress with the graphical interface
+Cypress with the graphical interface
 
 ![Test Case Failed - Cypress](mediaReadme/Cypress_Test_Case_Failed.png)
 
 
-### Report Mochawesome
+Report Mochawesome
 
 ![Test Case Failed - Report Mochawesome](mediaReadme/Report_Mochawesome_Test_Case_Failed.png)
