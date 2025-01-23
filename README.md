@@ -222,8 +222,7 @@ npm run full-report
 ![Report Mochawesome](mediaReadme/Report_Mochawesome_Suite.png)
 
 
-
-## Bug Report: Default Sorting by Name A-Z Instead of Price Ascending
+"<span style="color:red">Name: A-Z</span>" ## Bug Report: Default Sorting by Name A-Z Instead of Price Ascending "<span style="color:red">Price: Low to High</span>"
 
 ### Bug Description:
 The default sorting on the products page is set to "Name: A-Z" instead of the expected "Price: Low to High". When users access the products page, the sorting is incorrectly applied to names alphabetically instead of by price. This issue causes the test to fail, as it does not match the expected behavior of sorting by price by default.
