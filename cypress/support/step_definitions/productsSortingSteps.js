@@ -2,23 +2,23 @@ import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import ProductsSortingPage from '../../pages/productsSortingPage';
 
 
-When('I sort products by Name - A to Z', function() {
+When('I sort products by Name - A to Z', () => {
   ProductsSortingPage.selectSortByNameAscending();
 });
 
-When('I sort products by Name - Z to A',function() {
+When('I sort products by Name - Z to A', () => {
   ProductsSortingPage.selectSortByNameDescending();
 });
 
-When('I sort products by Price - low to high', function() {
+When('I sort products by Price - low to high', () => {
   ProductsSortingPage.selectSortByPriceLowToHigh();
 });
 
-When('I sort products by Price - high to low',function() {
+When('I sort products by Price - high to low', () => {
   ProductsSortingPage.selectSortByPriceHighToLow();
 });
 
-When('I Check sorting by Price is default',function() {
+When('I Check sorting by Price is default', () => {
   ProductsSortingPage.validateDefaultSortByPriceLowToHigh();
 });
   

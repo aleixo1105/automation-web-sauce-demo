@@ -2,6 +2,9 @@
     "scripts": {
         "test": "cypress run",
         "test-login": "npx cypress run --env TAGS=@login",
+        "test-hight": "npx cypress run --env TAGS=@high",
+        "test-mediumt": "npx cypress run --env TAGS=@medium",
+        "test-low": "npx cypress run --env TAGS=@low",
         "test-product": "npx cypress run --env TAGS=@product",
         "test-layout": "npx cypress run --env TAGS=@layout",
         "test-sorting": "npx cypress run --env TAGS=@sorting",

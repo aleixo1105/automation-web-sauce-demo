@@ -2,7 +2,15 @@ class LoginPage {
     visit() {
       cy.visit('/');
     }
-  
+    
+    checkEmailFields() {
+      cy.get('#user-name').should('be.visible').and('be.enabled');
+    }
+
+    checkPasswordFields() {
+      cy.get('#password').should('be.visible').and('be.enabled');
+    }
+
     enterUsername(username) {
       cy.get('#user-name').type(username);
     }
@@ -19,6 +27,12 @@ class LoginPage {
       return cy.get('[data-test="error"]');
     }
 
+    validateErrorMessage(expectedMessage) {
+      this.getErrorMessage()
+        .should('be.visible') 
+        .and('contain.text', expectedMessage);
+    }
+
     performLogin() {
 
       cy.visit('/');
@@ -32,7 +46,7 @@ class LoginPage {
   }
   
 
-
+ 
 
   export default new LoginPage();
    
