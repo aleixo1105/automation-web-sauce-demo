@@ -18,7 +18,7 @@ When('I sort products by Price - high to low',function() {
   ProductsSortingPage.selectSortByPriceHighToLow();
 });
 
-When('I Check sorting by Price is dedault',function() {
+When('I Check sorting by Price is default',function() {
   ProductsSortingPage.validateDefaultSortByPriceLowToHigh();
 });
   
