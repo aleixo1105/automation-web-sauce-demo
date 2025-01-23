@@ -119,7 +119,7 @@ automationWebSauceDemo/
 ```
 
 
-### Descrição das Pastas
+### Folders descriptions
 
 - **`e2e/features/`**:                 # Gherkin feature definition files
 - **`pages/`**:                        # Page objects for tests
@@ -187,4 +187,15 @@ Merge and generate the test reports:
 ````
 npm run full-report
 ````
-![Descrição da Imagem](mediaReadme/Report_Mochawesome_Suite.png)
+![Report Mochawesome](mediaReadme/Report_Mochawesome_Suite.png)
+
+
+## Where to see failed tests
+### Cypress with the graphical interface
+
+![Test Case Failed - Cypress](mediaReadme/Cypress_Test_Case_Failed.png)
+
+
+### Report Mochawesome
+
+![Test Case Failed - Report Mochawesome](mediaReadme/Report_Mochawesome_Test_Case_Failed.png)
