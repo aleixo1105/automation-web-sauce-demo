@@ -179,8 +179,6 @@ automationWebSauceDemo/
 
 
 
-
-
 ### How to Run the Project
 Follow the steps below to run the Cypress tests in the project.
 
@@ -220,6 +218,14 @@ Merge and generate the test reports:
 npm run full-report
 ````
 ![Report Mochawesome](mediaReadme/Report_Mochawesome_Suite.png)
+
+
+
+## Continuous Integration with GitHub Actions
+This project is integrated with **GitHub Actions** to automatically run the test suite whenever changes are pushed to the repository.
+### Workflow Overview:
+- **On Push:** Whenever code is pushed to the repository (on any branch), the test suite is executed.
+- **On Pull Request:** The tests are also run when a pull request is made to any branch.
 
 
 
